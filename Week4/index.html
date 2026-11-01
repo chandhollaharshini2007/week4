@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Student Management Dashboard</h1>
+
+        <div class="form-box">
+            <h2 id="formTitle">Add Student</h2>
+
+            <form id="studentForm">
+                <input type="hidden" id="editIndex">
+
+                <input type="text" id="name"
+                    placeholder="Enter Student Name" required>
+
+                <input type="text" id="roll"
+                    placeholder="Enter Roll Number" required>
+
+                <input type="text" id="department"
+                    placeholder="Enter Department" required>
+
+                <input type="email" id="email"
+                    placeholder="Enter Email" required>
+
+                <button type="submit" id="submitBtn">
+                    Add Student
+                </button>
+            </form>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="search"
+                placeholder="Search student...">
+
+            <select id="filter">
+                <option value="">All Departments</option>
+                <option value="CSE">CSE</option>
+                <option value="AIML">AIML</option>
+                <option value="ECE">ECE</option>
+                <option value="IT">IT</option>
+            </select>
+        </div>
+
+        <h2>Student Details</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Roll Number</th>
+                        <th>Department</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentList"></tbody>
+            </table>
+        </div>
+
+        <p id="count">Total Students: 0</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
